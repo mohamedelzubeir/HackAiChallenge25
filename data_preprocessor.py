@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import re
 from nltk.corpus import stopwords
-
+#test trial
 # Class for preprocessing the transaction data. 
 # This class will handle cleaning the text descriptions and managing missing values.
 class DataPreprocessor:
