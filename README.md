@@ -1,6 +1,6 @@
 # HackAiChallenge25
 
-# Team Members: Mohamed, Amir, Yunus
+# Team Members: Mohamed, Amir, Yunus, Omar
 
 ## Project Overview
 This project aims to develop an AI-based Personal Finance Tracker that automatically categorizes financial transactions based on their descriptions and amounts. The application will provide insights into spending patterns and help users manage their finances effectively.
