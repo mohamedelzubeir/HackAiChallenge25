@@ -29,15 +29,16 @@ class DataPreprocessor:
             text = ' '.join(word for word in text.split() if word not in stop_words)
             return text
         
-        self.transactions['cleaned_description'] = self.transactions['description'].apply(clean_text)
+        self.transactions['cleaned_description'] = self.transactions['Description'].apply(clean_text)
 
     def handle_missing_values(self):
         """
         Handles missing values in the transaction data.
         """
-        # Example: Fill missing amounts with 0 and drop rows with missing descriptions
-        self.transactions['amount'].fillna(0, inplace=True)
-        self.transactions.dropna(subset=['description'], inplace=True)
+        # Fill missing amounts with 0
+        self.transactions['Amount'] = self.transactions['Amount'].fillna(0)
+        # Drop rows with missing descriptions
+        self.transactions = self.transactions.dropna(subset=['Description'])
 
     def preprocess(self):
         """
